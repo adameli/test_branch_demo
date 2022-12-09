@@ -2,14 +2,12 @@
 
 let next = "X"
 let nextturnheading = document.querySelector("h1")
-
 let boxes = document.querySelectorAll("main>div")
 
 for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("click", action)
 
 }
-
 
 function action(event) {
     if (event.target.textContent === "") {
