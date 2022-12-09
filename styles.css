@@ -25,6 +25,7 @@ main {
 
 main>div {
     background-color: grey;
+
     display: flex;
     align-items: center;
     justify-content: center;
