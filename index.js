@@ -1,12 +1,25 @@
 "use strict"
 
-let next = "x"
+let next = "X"
 let nextturnheading = document.querySelector("h1")
 
-let boxone = document.querySelector("#one")
+let boxes = document.querySelectorAll("main>div")
 
-boxone.addEventListener("click", action)
+for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("click", action)
+
+}
+
 
 function action(event) {
-    console.log(event);
+    if (event.target.textContent === "") {
+        event.target.textContent = next;
+
+        if (next === "X") {
+            next = "O"
+        } else {
+            next = "X"
+        }
+    }
+    nextturnheading.textContent = `Next turn: ${next}`
 }
