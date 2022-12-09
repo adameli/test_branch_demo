@@ -22,4 +22,11 @@ function action(event) {
         }
     }
     nextturnheading.textContent = `Next turn: ${next}`
+    checkifsomeonewon()
+}
+
+function checkifsomeonewon() {
+    if (boxes[0].textContent === boxes[1].textContent && boxes[0].textContent === boxes[2].textContent) {
+        nextturnheading.textContent = `${boxes[0].textContent} WON !`
+    }
 }
